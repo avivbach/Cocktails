@@ -14,7 +14,7 @@ const httpsOptions = {
 app.get('/turn-on', (req, res) => {
     // Send HTTP request to ESP8266 to turn on the lightbulb
     // Replace 'esp8266-ip' with the IP address of your ESP8266
-    https.get('http://esp8266-ip/turn-on', (response) => {
+    https.get('http://192.168.1.125/turn-on', (response) => {
         console.log('Lightbulb turned on');
         res.send('Lightbulb turned on');
     });
@@ -23,7 +23,7 @@ app.get('/turn-on', (req, res) => {
 app.get('/turn-off', (req, res) => {
     // Send HTTP request to ESP8266 to turn off the lightbulb
     // Replace 'esp8266-ip' with the IP address of your ESP8266
-    https.get('http://esp8266-ip/turn-off', (response) => {
+    https.get('http://192.168.1.125/turn-off', (response) => {
         console.log('Lightbulb turned off');
         res.send('Lightbulb turned off');
     });
