@@ -2,7 +2,7 @@ const express = require('express');
 const https = require('https');
 const fs = require('fs');
 const app = express();
-const PORT = 3000;
+const PORT = 5500;
 
 // HTTPS options
 const httpsOptions = {
