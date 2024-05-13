@@ -13,14 +13,15 @@
     <button onclick="turnOff()">Turn Off</button>
 
     <script>
+let url = 'https://fd60-77-127-173-136.ngrok-free.app';
         function turnOn() {
-            fetch('https://aabd-77-127-173-136.ngrok-free.app/turn-on', { method: 'POST' })
+            fetch(url, { method: 'POST' })
                 .then(response => console.log(response))
                 .catch(error => console.error(error));
         }
 
         function turnOff() {
-            fetch('https://aabd-77-127-173-136.ngrok-free.app/turn-off', { method: 'POST' })
+            fetch(url, { method: 'POST' })
                 .then(response => console.log(response))
                 .catch(error => console.error(error));
         }
