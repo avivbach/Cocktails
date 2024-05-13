@@ -1,1 +1,40 @@
-<docktype html>
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ESP8266 Lightbulb Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Control the Lightbulb</h1>
+    <button id="onButton">Turn On</button>
+    <button id="offButton">Turn Off</button>
+    <script>
+        document.getElementById('onButton').addEventListener('click', function () {
+            sendHttpRequest('/on');
+        });
+        document.getElementById('offButton').addEventListener('click', function () {
+            sendHttpRequest('/off');
+        });
+        function sendHttpRequest(url) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>
