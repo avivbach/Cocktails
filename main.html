@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lightbulb Control</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>order here!</title>
 </head>
 
 <body>
@@ -12,19 +13,89 @@
     <button onclick="turnOn()">Turn On</button>
     <button onclick="turnOff()">Turn Off</button>
 
-    <script>
-    let url= 'https://a256-77-127-173-136.ngrok-free.app'
-        function turnOn() {
-            fetch(url+'/turn-on', { method: 'POST' })
-                .then(response => console.log(response))
-                .catch(error => console.error(error));
-        }
-
-        function turnOff() {
-            fetch(url+'/turn-off', { method: 'POST' })
-                .then(response => console.log(response))
-                .catch(error => console.error(error));
-        }
-    </script>
+    <div class="container">
+        <nav class="menu-container">
+            <!-- logo -->
+            <a href="https://nereyamantzur.github.io/CocktailApp/MyFirstHtml.html" class="menu-logo">
+                <img src="./images/logo.png" alt="My Awesome Website" />
+            </a>
+    
+        </nav>
+        <h1>Cocktail Menu</h1>
+        <div class="cocktail-grid" id="cocktailItem ">
+    
+            <div class="cocktailItem" onclick="toggleOptions(event,'Margarita')">
+                <img src="./images/margarita.jpg" alt="Margarita" />
+                <p>Margarita</p>
+                <div class="options">
+                    <p class="cocktailOrder" id="margarita" onclick="turnOn()"> <b>Order!</b></p>
+                </div>
+            </div>
+    
+            <div class="cocktailItem" onclick="toggleOptions(event,'Martini')">
+                <img src="./images/martini.jpg" alt="Martini" />
+                <p>Martini</p>
+                <div class="options">
+                    <p class="cocktailOrder" id="martini" onclick="turnOn()"> <b>Order!</b></p>
+                </div>
+            </div>
+    
+            <div class="cocktailItem" onclick="toggleOptions(event,'Bloody Mary')">
+                <img src="./images/bloodyMary.jpg" alt="Bloody Mary" />
+                <p>Bloody Mary</p>
+                <div class="options">
+                    <p class="cocktailOrder" id="bloodyMary" onclick="turnOn()"> <b>Order!</b></p>
+                </div>
+            </div>
+    
+            <div class="cocktailItem" onclick="toggleOptions(event,'Pina Colada')">
+                <img src="./images/pinaColada.avif" alt="Pina Colada" />
+                <p>Pina Colada</p>
+                <div class="options">
+                    <p class="cocktailOrder" id="pinaColada" onclick="turnOn()"> <b>Order!</b></p>
+                </div>
+    
+                <!-- Add more cocktail items as needed -->
+            </div>
+            <div class="cocktailItem" onclick="toggleOptions(event,'diy')">
+                <img src="./images/diy.jpg" alt="diy" />
+                <p>DIY</p>
+                <div class="options">
+                    <label> Select first 30 ml<br></label>
+                    <select class="choose">
+                        <option>-select-</option>
+                        <option>tequilla</option>
+                        <option>vodka</option>
+                        <option>gin</option>
+                        <option>rum</option>
+                    </select>
+                    <label><br>Select second 30 ml<br></label>
+                    <select class="choose">
+                        <option>-select-</option>
+                        <option>tequilla</option>
+                        <option>vodka</option>
+                        <option>gin</option>
+                        <option>rum</option>
+                    </select>
+                    <label><br>Select third 30 ml<br></label>
+                    <select class="choose">
+                        <option>-select-</option>
+                        <option>tequilla</option>
+                        <option>vodka</option>
+                        <option>gin</option>
+                        <option>rum</option>
+                    </select>
+    
+                    <p class="cocktailOrder" id="diy" onclick="turnOn()"> <b>Order!</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5>
+        <footer>
+            <p>&copy; 2024 Afeka cocktail machine</p>
+        </footer>
+    </h5>
+    <script src="script.js"></script>
 </body>
 </html>
