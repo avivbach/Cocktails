@@ -1,47 +1,30 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>ESP8266 Lightbulb Control</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightbulb Control</title>
 </head>
 
 <body>
-    <h1>Control the Lightbulb</h1>
-    <button id="onButton">Turn On</button>
-    <button id="offButton">Turn Off</button>
-    <script>
-        // Hardcoded IP address of the ESP8266
-        var esp8266IP = "192.168.1.125"; // Replace with the actual IP address
+    <h1>Lightbulb Control</h1>
+    <button onclick="turnOn()">Turn On</button>
+    <button onclick="turnOff()">Turn Off</button>
 
-        // Function to send HTTP request to ESP8266
-        function sendHttpRequest(url) {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'http://' + esp8266IP + url); // Concatenate IP address with URL
-            xhr.send();
+    <script>
+        function turnOn() {
+            fetch('/turn-on')
+                .then(response => console.log(response))
+                .catch(error => console.error(error));
         }
 
-        // Event listeners for buttons
-        document.getElementById('onButton').addEventListener('click', function () {
-            sendHttpRequest('/on');
-        });
-        document.getElementById('offButton').addEventListener('click', function () {
-            sendHttpRequest('/off');
-        });
+        function turnOff() {
+            fetch('/turn-off')
+                .then(response => console.log(response))
+                .catch(error => console.error(error));
+        }
     </script>
-
 </body>
 
 </html>
