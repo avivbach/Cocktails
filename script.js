@@ -1,4 +1,5 @@
 let url = 'https://2b11-77-127-173-136.ngrok-free.app'
+
 function turnOn() {
     fetch(url + '/turn-on', { method: 'POST' })
         .then(response => console.log(response))
@@ -34,6 +35,7 @@ var orders = document.querySelectorAll(".cocktailOrder");
 orders.forEach(function (element) {
     element.addEventListener("click", orderThis);
 });
+
 function orderThis(event) {
     alert(event.currentTarget.getAttribute("id"));
     var cocktailName = event.currentTarget.getAttribute("id");
