@@ -6,11 +6,14 @@ const char* password = "0542400393";
 
 ESP8266WebServer server(80);
 
-const int ledPin = D1; // Pin connected to the lightbulb
+const int ledPin1 = D1;
+const int ledPin2 = D2; // Pin connected to the lightbulb
 
 void setup() {
-    pinMode(ledPin, OUTPUT);
-    digitalWrite(ledPin, HIGH); // Ensure light is initially off
+    pinMode(ledPin1, OUTPUT);
+    digitalWrite(ledPin1, HIGH);
+    pinMode(ledPin2, OUTPUT);
+    digitalWrite(ledPin2, HIGH); // Ensure light is initially off
 
     Serial.begin(115200);
     delay(10);
@@ -42,11 +45,15 @@ void handleRoot() {
 }
 
 void handleOn() {
-    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin1, HIGH);
+    digitalWrite(ledPin2, HIGH);
+    delay(1000);
+    digitalWrite(ledPin2, LOW);
     server.send(200, "text/plain", "Lightbulb turned on");
 }
 
 void handleOff() {
-    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin1, LOW);
+    digitalWrite(ledPin2, LOW);
     server.send(200, "text/plain", "Lightbulb turned off");
 }
