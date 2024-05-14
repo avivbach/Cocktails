@@ -1,8 +1,14 @@
 https://nereyamantzur.github.io/cocktails/main.html
 
-1.	להפעיל את הפקודה node server.js (לשים לב שאנחנו בתיקייה הנכונה)
-2.	א) להפעיל את ngork עם הפקודה ngork.exe./ (לשים לב שאנחנו בתיקייה הנכונה)
-ב) להפעיל את הפקודה ngrok config add-authtoken 2gPtMLG1G4Us7iFXYztVkXhoYzF_2JvB2aXWtzPAm3SeLLp1P
-ג) להפעיל את הפקודה ngork http 5500
-ואם לא מצליח למצוא את הפקודה באתר https://dashboard.ngrok.com/ תחת setup and installations
-ד) להדביק את הurl למקום הנכון בserver.js
+1. open an terminal at the project directory and run "node server.js"
+
+2.  open a terminal at the project directory and run "ngrok.exe"
+
+    from https://dashboard.ngrok.com copy the authtoken and "ngrok config add-authtoken -'AOUTHTOKEN-HERE'-"
+    // replace -'AOUTHTOKEN-HERE'
+
+    run "ngrok http -'PORT-NUMBER'-"
+    // replace -'PORT-NUMBER'- 
+    
+    copy and add the url from ngrok to script.js under the variable url
+
