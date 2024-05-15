@@ -1,4 +1,4 @@
-let url = 'https://d5ab-77-127-173-136.ngrok-free.app'
+let url = 'https://bdfc-77-127-173-136.ngrok-free.app'
 
 function turnOn() {
     fetch(url + '/turn-on', { method: 'POST' })
