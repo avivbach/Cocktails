@@ -42,3 +42,12 @@ function orderThis(event) {
     window.location.href =
         "https://nereyamantzur.github.io/CocktailApp/" + cocktailName + ".html";
 }
+
+
+
+
+window.addEventListener('beforeunload', function (event) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/close-tunnel', true);
+    xhr.send();
+});
