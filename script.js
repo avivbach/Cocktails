@@ -1,4 +1,4 @@
-const webSocket = new WebSocket("wss://YOUR_ESP8266_IP_ADDRESS:443");
+const webSocket = new WebSocket("wss://192.168.1.217:443");
 
 webSocket.onopen = function (event) {
     console.log("WebSocket connection established");
