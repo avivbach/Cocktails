@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afeka Cocktails</title>
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="styles.css" />
-    <title>order here!</title>
+    <link rel="apple-touch-icon" href="./images/icon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-
-
     <div class="container">
         <nav class="menu-container">
             <!-- logo -->
-            <a href="https://nereyamantzur.github.io/cocktails/main.html" class="menu-logo">
+            <a href="https://nereyamantzur.github.io/CocktailApp/MyFirstHtml.html" class="menu-logo">
                 <img src="./images/logo.png" alt="My Awesome Website" />
             </a>
 
@@ -26,7 +26,7 @@
                 <img src="./images/margarita.jpg" alt="Margarita" />
                 <p>Margarita</p>
                 <div class="options">
-                    <p class="cocktailOrder" id="margarita" onclick="turnOn()"> <b>Order!</b></p>
+                    <p class="cocktailOrder" id="margarita"> <b>Order!</b></p>
                 </div>
             </div>
 
@@ -34,7 +34,7 @@
                 <img src="./images/martini.jpg" alt="Martini" />
                 <p>Martini</p>
                 <div class="options">
-                    <p class="cocktailOrder" id="martini" onclick="turnOn()"> <b>Order!</b></p>
+                    <p class="cocktailOrder" id="martini"> <b>Order!</b></p>
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
                 <img src="./images/bloodyMary.jpg" alt="Bloody Mary" />
                 <p>Bloody Mary</p>
                 <div class="options">
-                    <p class="cocktailOrder" id="bloodyMary" onclick="turnOn()"> <b>Order!</b></p>
+                    <p class="cocktailOrder" id="bloodyMary"> <b>Order!</b></p>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <img src="./images/pinaColada.avif" alt="Pina Colada" />
                 <p>Pina Colada</p>
                 <div class="options">
-                    <p class="cocktailOrder" id="pinaColada" onclick="turnOn()" onclick="orderThis()"> <b>Order!</b></p>
+                    <p class="cocktailOrder" id="pinaColada"> <b>Order!</b></p>
                 </div>
 
                 <!-- Add more cocktail items as needed -->
@@ -84,7 +84,7 @@
                         <option>rum</option>
                     </select>
 
-                    <p class="cocktailOrder" id="diy" onclick="turnOn()"> <b>Order!</b></p>
+                    <p class="cocktailOrder" id="diy"> <b>Order!</b></p>
                 </div>
             </div>
         </div>
@@ -94,13 +94,9 @@
             <p>&copy; 2024 Afeka cocktail machine</p>
         </footer>
     </h5>
-
-
     <h1>Lightbulb Control</h1>
     <button onclick="turnOn()">Turn On</button>
     <button onclick="turnOff()">Turn Off</button>
-
-
     <script src="script.js"></script>
 </body>
 
