@@ -1,20 +1,4 @@
-const webSocket = new WebSocket("ws://192.168.1.217:443");
-
-webSocket.onopen = function (event) {
-    console.log("WebSocket connection established");
-};
-
-webSocket.onmessage = function (event) {
-    console.log("Message received:", event.data);
-    // Handle incoming messages from ESP8266 here
-    // You can update UI or perform actions based on received messages
-};
-
-webSocket.onclose = function (event) {
-    console.log("WebSocket connection closed");
-};
-
-const url = 'https://48ff-77-127-173-136.ngrok-free.app'; // Replace with your ngrok URL or domain
+let url = 'https://48ff-77-127-173-136.ngrok-free.app'
 
 function turnOn() {
     fetch(url + '/turn-on', { method: 'POST' })
@@ -57,9 +41,4 @@ function orderThis(event) {
     var cocktailName = event.currentTarget.getAttribute("id");
     window.location.href =
         "https://nereyamantzur.github.io/CocktailApp/" + cocktailName + ".html";
-}
-
-// Function to send command to ESP8266 via WebSocket
-function sendCommand(command) {
-    webSocket.send(command); // Send command to ESP8266
 }
