@@ -21,4 +21,3 @@ function turnOff() {
     webSocket.send("turn-off");
 }
 
-// Add any additional WebSocket message handlers or event listeners as needed
