@@ -1,5 +1,5 @@
 function sendCommand(command) {
-    fetch(`http://your-server-ip/api?command=${command}`)
+    fetch(`http://192.168.1.215/api?command=${command}`)
         .then(response => response.text())
         .then(data => {
             console.log(data);
