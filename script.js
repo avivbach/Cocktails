@@ -36,10 +36,15 @@ function orderThis(event) {
 }
 
 
-
-
 window.addEventListener('beforeunload', function (event) {
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '/close-tunnel', true);
     xhr.send();
 });
+
+
+function sendCommand(command) {
+    fetch(`http://192.168.1.215/${command}`)
+        .then(response => response.text())
+        .then(data => console.log(data));
+}
