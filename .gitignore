@@ -1,3 +1,5 @@
 cocktail-control-server/
 
 commands
+certificate.crt
+private.key
