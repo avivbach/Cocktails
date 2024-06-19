@@ -1,5 +1,5 @@
 function toggleLight(state) {
-    fetch(`http://192.168.1.175/${state}`, {
+    fetch(`https://192.168.1.175/${state}`, {
         method: 'GET',
         mode: 'cors'
     })
