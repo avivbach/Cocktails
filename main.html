@@ -10,7 +10,6 @@
 
 <body>
 
-
     <div class="container">
         <nav class="menu-container">
             <!-- logo -->
@@ -22,11 +21,11 @@
         <h1>Cocktail Menu</h1>
         <div class="cocktail-grid" id="cocktailItem ">
 
-            <div class="cocktailItem" onclick="toggleOptions(event,'Margarita')">
+            <div class="cocktailItem" onclick="margarita()">
                 <img src="./images/margarita.jpg" alt="Margarita" />
                 <p>Margarita</p>
                 <div class="options">
-                    <p class="cocktailOrder" id="margarita" onclick="turnOn()"> <b>Order!</b></p>
+                    <p class="cocktailOrder" id="margarita" onclick="margarita()"> <b>Order!</b></p>
                 </div>
             </div>
 
@@ -94,11 +93,10 @@
             <p>&copy; 2024 Afeka cocktail machine</p>
         </footer>
     </h5>
-    
-<h1>ESP32 LED Control</h1>
-<button onclick="turnOn()">Turn On</button>
-<button onclick="turnOff()">Turn Off</button>
-<p id="status"></p>
+
+    <h1>ESP32 LED Control</h1>
+    <button onclick="turnOff()">Turn Off</button>
+    <p id="status"></p>
 
     <script src="script.js"></script>
 </body>
