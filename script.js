@@ -13,6 +13,18 @@ function margarita() {
         });
 }
 
+function martini() {
+    fetch(`${esp32_ip}/martini`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('status').innerText = "LED is ON";
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('status').innerText = "Error: Unable to turn on LED";
+        });
+}
+
 function turnOff() {
     fetch(`${esp32_ip}/turn-off`)
         .then(response => response.text())
